@@ -13,11 +13,8 @@ function getTime() {
     let hours = date.getHours();
     let mins = date.getMinutes();
     let secs = date.getSeconds();
-    clock.textContent = (hours + ':' + mins + ':' + secs);
 
-    // if(hours < 10 && mins < 10 && secs < 10) {
-    //     hours.slice
-    //   }
+    clock.textContent = (hours + ':' + mins + ':' + secs);
 
     body.style.backgroundColor = colors[i];
     i++;
@@ -27,22 +24,12 @@ function getTime() {
     }
 }
 
+// Converting 24hr time to 12hr time
+
+// Determine if AM or PM
+
+// Set leading zero for hours, mins, secs
+
+
+
 setInterval(getTime, 1000);
-
-// function time(){
-//     let d = new Date();
-//     let h = d.getHours();
-//     let m = d.getMinutes();
-//     let s = d.getSeconds();
-//     clock.textContent = (h + ':' + m + ':' + s);
-
-//     div.style.backgroundColor = colors[i];
-//     i++;
-
-//     if(i > colors.length){
-//         i = 0;
-//     }
-
-// };
-
-// setInterval(time, 1000);
