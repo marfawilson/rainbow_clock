@@ -25,11 +25,12 @@ function currentTime() {
     let hours = date.getHours();
     let mins = pad(date.getMinutes());
     let sec = pad(date.getSeconds());
-    let ampm = hours >= 12 ? 'pm' : 'am'; // returns pm if hours >= 12, else returns am
+    let ampm = hours >= 12 ? 'pm' : 'am'; // logic for determining AM or PM
     hours = hours % 12; // current hour divided by 12
+    hours = hours ? hours : 12; // logic for zero hour (midnight)
     hours = pad(hours);
 
-    return `${hours}:${mins}:${sec}${ampm}`;
+    return `${hours}:${mins}:${sec} ${ampm}`;
 }
 
 
