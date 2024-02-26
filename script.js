@@ -9,6 +9,7 @@ let i = 0;
 // Date constructor
 let date = new Date();
 
+
 // Pad time with leading zero
 function pad(number) {
     if(number < 10) {
@@ -19,17 +20,16 @@ function pad(number) {
 }
 
 
-// Get current time
+// Get current time with 12hr format and AM/PM
 function currentTime() {
-    let hours = pad(date.getHours());
+    let hours = date.getHours();
     let mins = pad(date.getMinutes());
     let sec = pad(date.getSeconds());
+    let ampm = hours >= 12 ? 'pm' : 'am'; // returns pm if hours >= 12, else returns am
+    hours = hours % 12; // current hour divided by 12
+    hours = pad(hours);
 
-    if(hours < 23) {
-        
-    }
-
-    return `${hours}:${mins}:${sec}`;
+    return `${hours}:${mins}:${sec}${ampm}`;
 }
 
 
