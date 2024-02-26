@@ -6,30 +6,31 @@ let colors = [ '#4FC3F7', '#29B6F6', '#03A9F4', '#039BE5', '#0288D1', '#0277BD',
 // Array index
 let i = 0;
 
+// Date constructor
+let date = new Date();
 
-// Get time & set background color
-function getTime() {
-    let date = new Date();
-    let hours = date.getHours();
-    let mins = date.getMinutes();
-    let secs = date.getSeconds();
-
-    clock.textContent = (hours + ':' + mins + ':' + secs);
-
-    body.style.backgroundColor = colors[i];
-    i++;
-
-    if (i > colors.length) {
-        i = 0;
+// Pad time with leading zero
+function pad(number) {
+    if(number < 10) {
+        return '0' + number;
+    } else {
+        return number;
     }
 }
 
-// Converting 24hr time to 12hr time
 
-// Determine if AM or PM
+// Get current time
+function currentTime() {
+    let hours = pad(date.getHours());
+    let mins = pad(date.getMinutes());
+    let sec = pad(date.getSeconds());
 
-// Set leading zero for hours, mins, secs
+    if(hours < 23) {
+        
+    }
+
+    return `${hours}:${mins}:${sec}`;
+}
 
 
-
-setInterval(getTime, 1000);
+console.log(currentTime());
