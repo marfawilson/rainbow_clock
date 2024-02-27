@@ -20,7 +20,7 @@ function padTime(number) {
 }
 
 
-// Display time and change background color each second
+// Change background color each second
 function changeColor() {
     body.style.backgroundColor = colors[i];
     i++;
