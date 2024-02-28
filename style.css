@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
 body {
     background: #4fc3f7;
+    font-family: "Kode Mono", monospace;
+    margin: 0;
 }
 
 div {
-    padding-top: 200px;
-    padding-right: 400px;
-    padding-bottom: 200px;
-    padding-left: 500px;
+    padding: 200px 545px;
+    max-width: max-content;
     font-size: 96px;
     color: white;
 }
